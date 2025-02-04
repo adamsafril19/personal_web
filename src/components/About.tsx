@@ -6,10 +6,12 @@ const About = () => {
   return (
     <motion.section
       id="about"
-      className="min-h-screen flex items-center pt-16 bg-[url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8')] bg-cover bg-no-repeat bg-center bg-fixed relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-900 before:to-emerald-950 before:opacity-90 before:-z-10"
+      className="min-h-screen flex items-center pt-16 bg-[url('/src/assets/bgSatu.jpg')] bg-cover bg-no-repeat bg-center bg-fixed relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-900 before:to-emerald-950 before:opacity-90 before:-z-10"
     >
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-16">About Me</h2>
+        <h2 className="text-3xl font-bold text-center mb-16 text-primary">
+          About Me
+        </h2>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -21,8 +23,10 @@ const About = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold mb-4">Who I Am</h3>
-            <p className="text-gray-600 mb-6 drop-shadow-sm">
+            <h3 className="text-2xl font-semibold mb-4 text-secondary">
+              Who I Am
+            </h3>
+            <p className="text-gray-100 mb-6 drop-shadow-sm">
               I'm a passionate developer with over 1 years of experience in
               creating web applications. I love turning complex problems into
               simple, beautiful, and intuitive solutions.
@@ -34,8 +38,8 @@ const About = () => {
                   <BookOpen className="text-blue-600" />
                 </div>
                 <div className="ml-4">
-                  <h4 className="font-semibold">Education</h4>
-                  <p className="text-gray-600 drop-shadow-sm">
+                  <h4 className="font-semibold text-secondary">Education</h4>
+                  <p className="text-gray-100 drop-shadow-sm">
                     Business Information Sistem at State Polytechnic of Malang
                   </p>
                 </div>
@@ -46,8 +50,8 @@ const About = () => {
                   <Award className="text-green-600" />
                 </div>
                 <div className="ml-4">
-                  <h4 className="font-semibold">Experience</h4>
-                  <p className="text-gray-600 drop-shadow-sm">
+                  <h4 className="font-semibold text-secondary">Experience</h4>
+                  <p className="text-gray-100 drop-shadow-sm">
                     1 years in web development
                   </p>
                 </div>
@@ -58,8 +62,8 @@ const About = () => {
                   <Heart className="text-purple-600" />
                 </div>
                 <div className="ml-4">
-                  <h4 className="font-semibold">Passion</h4>
-                  <p className="text-gray-600 drop-shadow-sm">
+                  <h4 className="font-semibold text-secondary">Passion</h4>
+                  <p className="text-gray-100 drop-shadow-sm">
                     Creating web applications and API Development
                   </p>
                 </div>

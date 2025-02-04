@@ -32,7 +32,7 @@ const Header = () => {
               >
                 <a
                   href={item.href}
-                  className="text-black hover:text-secondary transition-colors drop-shadow-sm"
+                  className="font-bold text-white drop-shadow-lg hover:text-secondary transition-colors drop-shadow-sm"
                   onClick={(e) => {
                     e.preventDefault();
                     document.querySelector(item.href)?.scrollIntoView({
@@ -49,20 +49,20 @@ const Header = () => {
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="https://github.com"
-              className="text-black hover:text-secondary drop-shadow-sm"
+              href="https://github.com/adamsafril19"
+              className="font-bold text-white drop-shadow-lg hover:text-secondary drop-shadow-sm"
             >
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com"
-              className="text-black hover:text-secondary drop-shadow-sm"
+              href="https://www.linkedin.com/in/adam-safrila-5122971a2/"
+              className="font-bold text-white drop-shadow-lg hover:text-secondary drop-shadow-sm"
             >
               <Linkedin size={20} />
             </a>
             <a
-              href="mailto:your@email.com"
-              className="text-black hover:text-secondary"
+              href="mailto:adamsafrila0@gmail.com"
+              className="font-bold text-white drop-shadow-lg hover:text-secondary"
             >
               <Mail size={20} />
             </a>

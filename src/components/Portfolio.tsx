@@ -7,31 +7,33 @@ import { FadeInView } from "./animations/FadeInView";
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Web HR Management Information System",
     description:
-      "A full-featured e-commerce platform built with React and Node.js",
+      "HR Management Information System is an information system created to manage the distribution of HR tasks at JTI (Jurusan Teknologi Informasi Polinema) in web platform.",
     image: "https://images.unsplash.com/photo-1557821552-17105176677c",
-    technologies: ["React", "Node.js", "MongoDB"],
-    github: "https://github.com",
-    link: "https://project.com",
+    technologies: ["Laravel", "MySQL", "Bootstrap"],
+    github: "https://github.com/Salma310/simas_web",
+    link: "#",
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management application",
+    title: "App HR Management Information System",
+    description:
+      "HR Management Information System is an information system created to manage the distribution of HR tasks at JTI (Jurusan Teknologi Informasi Polinema) in mobile platform.",
     image: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
-    technologies: ["Vue.js", "Firebase"],
+    technologies: ["Flutter", "MySQL"],
     github: "https://github.com",
-    link: "https://project.com",
+    link: "#",
   },
   {
     id: 3,
     title: "Portfolio Website",
-    description: "A responsive portfolio website built with React",
+    description:
+      "A responsive portfolio website built with React and Typescript",
     image: "https://images.unsplash.com/photo-1559028012-481c04fa702d",
-    technologies: ["React", "Tailwind CSS"],
-    github: "https://github.com",
-    link: "https://project.com",
+    technologies: ["React", "Typescript"],
+    github: "https://github.com/adamsafril19/personal_web",
+    link: "#",
   },
 ];
 
@@ -39,11 +41,11 @@ const Portfolio = () => {
   return (
     <motion.section
       id="portfolio"
-      className="min-h-screen flex items-center pt-16 bg-[url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8')] bg-cover bg-no-repeat bg-center bg-fixed relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-900 before:to-emerald-950 before:opacity-90 before:-z-10"
+      className="min-h-screen flex items-center pt-16 bg-[url('/src/assets/bgSatu.jpg')] bg-cover bg-no-repeat bg-center bg-fixed relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-900 before:to-emerald-950 before:opacity-90 before:-z-10"
     >
       <div className="container mx-auto px-6">
         <FadeInView>
-          <h2 className="text-3xl font-bold text-center mb-16 text-gray-900">
+          <h2 className="text-3xl font-bold text-center mb-16 text-gray-900 text-primary">
             My Portfolio
           </h2>
         </FadeInView>
@@ -91,7 +93,7 @@ const Portfolio = () => {
                         Code
                       </motion.a>
                     )}
-                    {project.link && (
+                    {/* {project.link && (
                       <motion.a
                         href={project.link}
                         className="flex items-center text-secondary hover:text-secondary/80"
@@ -103,7 +105,7 @@ const Portfolio = () => {
                         <ExternalLink size={20} className="mr-2" />
                         Live Demo
                       </motion.a>
-                    )}
+                    )} */}
                   </div>
                 </div>
               </motion.div>

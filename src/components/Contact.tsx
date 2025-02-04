@@ -41,12 +41,12 @@ const Contact = () => {
   return (
     <motion.section
       id="contact"
-      className="min-h-screen flex items-center pt-16 bg-[url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8')] bg-cover bg-no-repeat bg-center bg-fixed relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-900 before:to-emerald-950 before:opacity-90 before:-z-10"
+      className="min-h-screen flex items-center pt-16 bg-[url('/src/assets/bgSatu.jpg')] bg-cover bg-no-repeat bg-center bg-fixed relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-900 before:to-emerald-950 before:opacity-90 before:-z-10"
     >
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-gray-600 text-lg drop-shadow-sm">
+          <h2 className="text-4xl font-bold mb-4 text-primary">Get In Touch</h2>
+          <p className="text-gray-100 text-lg drop-shadow-sm">
             Let's work together! Feel free to reach out for collaborations or
             just a friendly hello
           </p>
@@ -104,19 +104,19 @@ const Contact = () => {
             {/* Social Links */}
             <div className="flex justify-center space-x-4 mt-8">
               <a
-                href="#"
+                href="https://www.linkedin.com/in/adam-safrila-5122971a2/"
                 className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
               >
                 <Linkedin className="w-6 h-6 text-gray-600 drop-shadow-sm" />
               </a>
               <a
-                href="#"
+                href="https://github.com/adamsafril19"
                 className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
               >
                 <Github className="w-6 h-6 text-gray-600 drop-shadow-sm" />
               </a>
               <a
-                href="https://instagram.com/username"
+                href="https://www.instagram.com/adamsfrlh/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
