@@ -32,9 +32,15 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <section id="blog" className="py-20 bg-white">
+    <section
+      id="blog"
+      className="py-20 bg-abyssal-base text-white relative overflow-hidden"
+    >
+      {" "}
+      {/* Apply base bg and text color */}
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-16">
+        {/* Adjusted header gradient */}
+        <h2 className="text-3xl font-bold text-center mb-16 bg-gradient-to-r from-abyssal-accent to-orange-400 bg-clip-text text-transparent">
           Latest Articles
         </h2>
 
@@ -42,29 +48,45 @@ const Blog = () => {
           {blogPosts.map((post) => (
             <article
               key={post.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden"
+              // Adjusted card style: background, border, hover effect
+              className="group bg-abyssal-base/50 rounded-lg shadow-lg overflow-hidden border border-abyssal-accent/20 hover:border-abyssal-accent/50 hover:shadow-glow-inner transition-all duration-300 backdrop-blur-sm"
             >
-              <img
-                src={post.image}
-                alt={post.title}
-                className="w-full h-48 object-cover"
-              />
+              <div className="overflow-hidden">
+                {" "}
+                {/* Added container for image zoom effect */}
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" // Image zoom on hover
+                />
+              </div>
               <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 mb-4">
-                  <Calendar size={16} className="mr-2" />
+                {/* Adjusted meta text color */}
+                <div className="flex items-center text-sm text-white/70 mb-4">
+                  <Calendar size={16} className="mr-2 text-abyssal-accent" />{" "}
+                  {/* Accent color for icon */}
                   <span>{post.date}</span>
-                  <Clock size={16} className="ml-4 mr-2" />
+                  <Clock
+                    size={16}
+                    className="ml-4 mr-2 text-abyssal-accent"
+                  />{" "}
+                  {/* Accent color for icon */}
                   <span>{post.readTime}</span>
                 </div>
 
-                <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-                <p className="text-gray-600 mb-4 drop-shadow-sm">
+                {/* Ensure title text is white */}
+                <h3 className="text-xl font-semibold mb-2 text-white">
+                  {post.title}
+                </h3>
+                {/* Ensure excerpt text is white */}
+                <p className="text-white/80 mb-4 drop-shadow-sm">
                   {post.excerpt}
                 </p>
 
+                {/* Adjusted link color */}
                 <a
                   href="#"
-                  className="text-blue-600 hover:text-blue-700 font-medium"
+                  className="text-abyssal-accent hover:text-orange-400 font-medium"
                 >
                   Read More →
                 </a>

@@ -123,7 +123,8 @@ const Contact = () => {
   return (
     <motion.section
       id="contact"
-      className="min-h-screen flex items-center pt-16 bg-[url('/src/assets/bgSatu.jpg')] bg-cover bg-no-repeat bg-center bg-fixed relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-900 before:to-emerald-950 before:opacity-90 before:-z-10"
+      // Apply base background and text color
+      className="min-h-screen flex items-center py-20 bg-abyssal-base text-white relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
@@ -135,12 +136,16 @@ const Contact = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="px-4 py-1 bg-emerald-700 text-white text-sm rounded-full inline-block mb-4">
+            {/* Adjusted badge style */}
+            <span className="px-4 py-1 bg-abyssal-accent/20 text-abyssal-accent text-sm rounded-full inline-block mb-4">
               CONNECT WITH ME
             </span>
+            {/* Ensure text is white */}
             <h2 className="text-5xl font-bold mb-4 text-white">Get In Touch</h2>
-            <div className="w-20 h-1 bg-emerald-400 mx-auto my-6 rounded-full"></div>
-            <p className="text-gray-100 text-lg drop-shadow-sm">
+            {/* Adjusted divider color */}
+            <div className="w-20 h-1 bg-abyssal-accent mx-auto my-6 rounded-full"></div>
+            {/* Ensure text is white */}
+            <p className="text-white text-lg drop-shadow-sm">
               Let's work together! Feel free to reach out for collaborations or
               just a friendly hello. I'm always open to discussing new projects
               and opportunities.
@@ -156,19 +161,23 @@ const Contact = () => {
             initial="hidden"
             animate="visible"
           >
+            {/* Card 1 - Adjusted style */}
             <motion.div
-              className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-abyssal-base/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-glow-inner border border-abyssal-accent/20 hover:border-abyssal-accent/50 transition-all duration-300 transform hover:-translate-y-1"
               variants={itemVariants}
             >
               <div className="flex items-center space-x-4">
-                <div className="p-3 bg-blue-100 rounded-lg">
-                  <Mail className="text-blue-600 w-6 h-6" />
+                {/* Adjusted icon style */}
+                <div className="p-3 bg-abyssal-accent/10 rounded-lg">
+                  <Mail className="text-abyssal-accent w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Email</h4>
+                  {/* Ensure text is white */}
+                  <h4 className="font-semibold text-white">Email</h4>
+                  {/* Adjusted link color */}
                   <a
                     href="mailto:adamsafrila0@gmail.com"
-                    className="text-blue-600 hover:text-blue-700 transition-colors"
+                    className="text-abyssal-accent hover:text-orange-400 transition-colors"
                   >
                     adamsafrila0@gmail.com
                   </a>
@@ -176,19 +185,23 @@ const Contact = () => {
               </div>
             </motion.div>
 
+            {/* Card 2 - Adjusted style */}
             <motion.div
-              className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-abyssal-base/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-glow-inner border border-abyssal-accent/20 hover:border-abyssal-accent/50 transition-all duration-300 transform hover:-translate-y-1"
               variants={itemVariants}
             >
               <div className="flex items-center space-x-4">
-                <div className="p-3 bg-green-100 rounded-lg">
-                  <Phone className="text-green-600 w-6 h-6" />
+                {/* Adjusted icon style */}
+                <div className="p-3 bg-abyssal-accent/10 rounded-lg">
+                  <Phone className="text-abyssal-accent w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Phone</h4>
+                  {/* Ensure text is white */}
+                  <h4 className="font-semibold text-white">Phone</h4>
+                  {/* Adjusted link color */}
                   <a
                     href="tel:+62895395039902"
-                    className="text-green-600 hover:text-green-700 transition-colors"
+                    className="text-abyssal-accent hover:text-orange-400 transition-colors"
                   >
                     +62 895 395 039 902
                   </a>
@@ -196,51 +209,59 @@ const Contact = () => {
               </div>
             </motion.div>
 
+            {/* Card 3 - Adjusted style */}
             <motion.div
-              className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-abyssal-base/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-glow-inner border border-abyssal-accent/20 hover:border-abyssal-accent/50 transition-all duration-300 transform hover:-translate-y-1"
               variants={itemVariants}
             >
               <div className="flex items-center space-x-4">
-                <div className="p-3 bg-purple-100 rounded-lg">
-                  <MapPin className="text-purple-600 w-6 h-6" />
+                {/* Adjusted icon style */}
+                <div className="p-3 bg-abyssal-accent/10 rounded-lg">
+                  <MapPin className="text-abyssal-accent w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Location</h4>
-                  <p className="text-purple-600">Malang, Jawa Timur</p>
+                  {/* Ensure text is white */}
+                  <h4 className="font-semibold text-white">Location</h4>
+                  {/* Adjusted text color */}
+                  <p className="text-abyssal-accent">Malang, Jawa Timur</p>
                 </div>
               </div>
             </motion.div>
 
+            {/* Card 4 - Adjusted style */}
             <motion.div
-              className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-abyssal-base/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-glow-inner border border-abyssal-accent/20 hover:border-abyssal-accent/50 transition-all duration-300 transform hover:-translate-y-1"
               variants={itemVariants}
             >
               <div className="flex items-center space-x-4">
-                <div className="p-3 bg-amber-100 rounded-lg">
-                  <Clock className="text-amber-600 w-6 h-6" />
+                {/* Adjusted icon style */}
+                <div className="p-3 bg-abyssal-accent/10 rounded-lg">
+                  <Clock className="text-abyssal-accent w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Working Hours</h4>
-                  <p className="text-amber-600">Mon - Fri, 9AM - 5PM</p>
+                  {/* Ensure text is white */}
+                  <h4 className="font-semibold text-white">Working Hours</h4>
+                  {/* Adjusted text color */}
+                  <p className="text-abyssal-accent">Mon - Fri, 9AM - 5PM</p>
                 </div>
               </div>
             </motion.div>
 
-            {/* Social Links */}
+            {/* Social Links - Adjusted style */}
             <motion.div
               className="flex justify-center space-x-4 mt-8"
               variants={itemVariants}
             >
               <a
                 href="https://www.linkedin.com/in/adam-safrila-5122971a2/"
-                className="p-3 bg-white/90 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-md"
+                className="p-3 bg-abyssal-base/70 text-abyssal-accent rounded-full hover:bg-abyssal-accent hover:text-abyssal-base transition-all duration-300 shadow-md border border-abyssal-accent/30"
                 title="LinkedIn"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
                 href="https://github.com/adamsafril19"
-                className="p-3 bg-white/90 rounded-full hover:bg-gray-800 hover:text-white transition-all duration-300 shadow-md"
+                className="p-3 bg-abyssal-base/70 text-abyssal-accent rounded-full hover:bg-abyssal-accent hover:text-abyssal-base transition-all duration-300 shadow-md border border-abyssal-accent/30"
                 title="GitHub"
               >
                 <Github className="w-6 h-6" />
@@ -249,14 +270,14 @@ const Contact = () => {
                 href="https://www.instagram.com/adamsfrlh/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-white/90 rounded-full hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-all duration-300 shadow-md"
+                className="p-3 bg-abyssal-base/70 text-abyssal-accent rounded-full hover:bg-abyssal-accent hover:text-abyssal-base transition-all duration-300 shadow-md border border-abyssal-accent/30"
                 title="Instagram"
               >
                 <Instagram className="w-6 h-6" />
               </a>
               <a
                 href="#portfolio"
-                className="p-3 bg-white/90 rounded-full hover:bg-emerald-600 hover:text-white transition-all duration-300 shadow-md"
+                className="p-3 bg-abyssal-base/70 text-abyssal-accent rounded-full hover:bg-abyssal-accent hover:text-abyssal-base transition-all duration-300 shadow-md border border-abyssal-accent/30"
                 title="Portfolio"
                 onClick={(e) => {
                   e.preventDefault();
@@ -272,20 +293,21 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="lg:col-span-2">
+            {/* Adjusted form container style */}
             <motion.div
-              className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-xl"
+              className="bg-abyssal-base/50 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-abyssal-accent/20"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              {/* Tabs */}
-              <div className="flex mb-8 border-b border-gray-200">
+              {/* Tabs - Adjusted border and text colors */}
+              <div className="flex mb-8 border-b border-abyssal-accent/30">
                 <button
                   onClick={() => setActiveTab("message")}
                   className={`px-6 py-3 font-medium text-sm transition-colors relative ${
                     activeTab === "message"
-                      ? "text-blue-600"
-                      : "text-gray-500 hover:text-gray-700"
+                      ? "text-abyssal-accent" // Active tab color
+                      : "text-white/70 hover:text-white" // Inactive tab color
                   }`}
                 >
                   <div className="flex items-center space-x-2">
@@ -294,7 +316,7 @@ const Contact = () => {
                   </div>
                   {activeTab === "message" && (
                     <motion.div
-                      className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600"
+                      className="absolute bottom-0 left-0 w-full h-0.5 bg-abyssal-accent" // Active tab underline color
                       layoutId="activeTab"
                     ></motion.div>
                   )}
@@ -303,8 +325,8 @@ const Contact = () => {
                   onClick={() => setActiveTab("faq")}
                   className={`px-6 py-3 font-medium text-sm transition-colors relative ${
                     activeTab === "faq"
-                      ? "text-blue-600"
-                      : "text-gray-500 hover:text-gray-700"
+                      ? "text-abyssal-accent" // Active tab color
+                      : "text-white/70 hover:text-white" // Inactive tab color
                   }`}
                 >
                   <div className="flex items-center space-x-2">
@@ -313,7 +335,7 @@ const Contact = () => {
                   </div>
                   {activeTab === "faq" && (
                     <motion.div
-                      className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600"
+                      className="absolute bottom-0 left-0 w-full h-0.5 bg-abyssal-accent" // Active tab underline color
                       layoutId="activeTab"
                     ></motion.div>
                   )}
@@ -329,13 +351,14 @@ const Contact = () => {
                       animate={{ scale: 1, opacity: 1 }}
                       transition={{ type: "spring", stiffness: 100 }}
                     >
-                      <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-6">
-                        <CheckCircle className="w-10 h-10 text-green-600" />
+                      {/* Adjusted success message style */}
+                      <div className="inline-flex items-center justify-center w-20 h-20 bg-abyssal-accent/10 rounded-full mb-6">
+                        <CheckCircle className="w-10 h-10 text-abyssal-accent" />
                       </div>
-                      <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                      <h3 className="text-2xl font-bold text-white mb-2">
                         Message Sent Successfully!
                       </h3>
-                      <p className="text-gray-600 mb-6">
+                      <p className="text-white/80 mb-6">
                         Thank you for reaching out. I'll get back to you as soon
                         as possible.
                       </p>
@@ -346,7 +369,8 @@ const Contact = () => {
                         <div>
                           <label
                             htmlFor="name"
-                            className="block text-sm font-medium text-gray-700 mb-2"
+                            // Adjusted label color
+                            className="block text-sm font-medium text-white/80 mb-2"
                           >
                             Full Name <span className="text-red-500">*</span>
                           </label>
@@ -356,7 +380,8 @@ const Contact = () => {
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                            // Adjusted input style
+                            className="w-full px-4 py-3 rounded-lg border border-abyssal-accent/30 bg-abyssal-base/70 text-white focus:ring-2 focus:ring-abyssal-accent focus:border-transparent transition-colors placeholder-white/50"
                             placeholder="John Doe"
                             required
                           />
@@ -365,7 +390,8 @@ const Contact = () => {
                         <div>
                           <label
                             htmlFor="email"
-                            className="block text-sm font-medium text-gray-700 mb-2"
+                            // Adjusted label color
+                            className="block text-sm font-medium text-white/80 mb-2"
                           >
                             Email Address{" "}
                             <span className="text-red-500">*</span>
@@ -376,7 +402,8 @@ const Contact = () => {
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                            // Adjusted input style
+                            className="w-full px-4 py-3 rounded-lg border border-abyssal-accent/30 bg-abyssal-base/70 text-white focus:ring-2 focus:ring-abyssal-accent focus:border-transparent transition-colors placeholder-white/50"
                             placeholder="john@example.com"
                             required
                           />
@@ -387,7 +414,8 @@ const Contact = () => {
                         <div>
                           <label
                             htmlFor="service"
-                            className="block text-sm font-medium text-gray-700 mb-2"
+                            // Adjusted label color
+                            className="block text-sm font-medium text-white/80 mb-2"
                           >
                             Service Needed
                           </label>
@@ -396,7 +424,8 @@ const Contact = () => {
                             name="service"
                             value={formData.service}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                            // Adjusted select style
+                            className="w-full px-4 py-3 rounded-lg border border-abyssal-accent/30 bg-abyssal-base/70 text-white focus:ring-2 focus:ring-abyssal-accent focus:border-transparent transition-colors appearance-none"
                           >
                             <option value="">Select a service</option>
                             {services.map((service, index) => (
@@ -410,7 +439,8 @@ const Contact = () => {
                         <div>
                           <label
                             htmlFor="budget"
-                            className="block text-sm font-medium text-gray-700 mb-2"
+                            // Adjusted label color
+                            className="block text-sm font-medium text-white/80 mb-2"
                           >
                             Budget Range
                           </label>
@@ -419,7 +449,8 @@ const Contact = () => {
                             name="budget"
                             value={formData.budget}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                            // Adjusted select style
+                            className="w-full px-4 py-3 rounded-lg border border-abyssal-accent/30 bg-abyssal-base/70 text-white focus:ring-2 focus:ring-abyssal-accent focus:border-transparent transition-colors appearance-none"
                           >
                             <option value="">Select budget range</option>
                             <option value="< $1000">Less than $1,000</option>
@@ -435,7 +466,8 @@ const Contact = () => {
                       <div className="mb-6">
                         <label
                           htmlFor="subject"
-                          className="block text-sm font-medium text-gray-700 mb-2"
+                          // Adjusted label color
+                          className="block text-sm font-medium text-white/80 mb-2"
                         >
                           Subject <span className="text-red-500">*</span>
                         </label>
@@ -445,7 +477,8 @@ const Contact = () => {
                           name="subject"
                           value={formData.subject}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                          // Adjusted input style
+                          className="w-full px-4 py-3 rounded-lg border border-abyssal-accent/30 bg-abyssal-base/70 text-white focus:ring-2 focus:ring-abyssal-accent focus:border-transparent transition-colors placeholder-white/50"
                           placeholder="How can I help you?"
                           required
                         />
@@ -454,13 +487,15 @@ const Contact = () => {
                       <div className="mb-6">
                         <label
                           htmlFor="deadline"
-                          className="block text-sm font-medium text-gray-700 mb-2"
+                          // Adjusted label color
+                          className="block text-sm font-medium text-white/80 mb-2"
                         >
                           Project Deadline
                         </label>
                         <div className="relative">
                           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <Calendar className="w-5 h-5 text-gray-400" />
+                            {/* Adjusted icon color */}
+                            <Calendar className="w-5 h-5 text-white/50" />
                           </div>
                           <input
                             type="date"
@@ -468,7 +503,8 @@ const Contact = () => {
                             name="deadline"
                             value={formData.deadline}
                             onChange={handleChange}
-                            className="w-full pl-10 px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                            // Adjusted date input style
+                            className="w-full pl-10 px-4 py-3 rounded-lg border border-abyssal-accent/30 bg-abyssal-base/70 text-white focus:ring-2 focus:ring-abyssal-accent focus:border-transparent transition-colors"
                           />
                         </div>
                       </div>
@@ -476,7 +512,8 @@ const Contact = () => {
                       <div className="mb-6">
                         <label
                           htmlFor="message"
-                          className="block text-sm font-medium text-gray-700 mb-2"
+                          // Adjusted label color
+                          className="block text-sm font-medium text-white/80 mb-2"
                         >
                           Message <span className="text-red-500">*</span>
                         </label>
@@ -486,7 +523,8 @@ const Contact = () => {
                           value={formData.message}
                           onChange={handleChange}
                           rows={6}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                          // Adjusted textarea style
+                          className="w-full px-4 py-3 rounded-lg border border-abyssal-accent/30 bg-abyssal-base/70 text-white focus:ring-2 focus:ring-abyssal-accent focus:border-transparent transition-colors placeholder-white/50"
                           placeholder="Describe your project or inquiry in detail..."
                           required
                         ></textarea>
@@ -495,10 +533,12 @@ const Contact = () => {
                       <button
                         type="submit"
                         disabled={loading}
-                        className="w-full px-6 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2 disabled:opacity-70 group"
+                        // Adjusted button style
+                        className="w-full px-6 py-4 bg-abyssal-accent text-abyssal-base rounded-lg hover:bg-orange-400 transition-colors flex items-center justify-center space-x-2 disabled:opacity-70 group font-semibold"
                       >
                         {loading ? (
-                          <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                          // Adjusted spinner color
+                          <div className="w-6 h-6 border-2 border-abyssal-base border-t-transparent rounded-full animate-spin"></div>
                         ) : (
                           <>
                             <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -516,36 +556,42 @@ const Contact = () => {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                  {/* Adjusted FAQ title color */}
+                  <h3 className="text-xl font-semibold text-white mb-4">
                     Frequently Asked Questions
                   </h3>
                   {faqs.map((faq, index) => (
                     <motion.div
                       key={index}
-                      className="border border-gray-200 rounded-lg overflow-hidden"
+                      // Adjusted FAQ item style
+                      className="border border-abyssal-accent/20 rounded-lg overflow-hidden bg-abyssal-base/30"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 }}
                     >
-                      <div className="bg-gray-50 p-4">
-                        <h4 className="font-medium text-gray-800">
+                      {/* Adjusted FAQ question style */}
+                      <div className="bg-abyssal-base/50 p-4">
+                        <h4 className="font-medium text-white">
                           {faq.question}
                         </h4>
                       </div>
+                      {/* Adjusted FAQ answer style */}
                       <div className="p-4">
-                        <p className="text-gray-600">{faq.answer}</p>
+                        <p className="text-white/80">{faq.answer}</p>
                       </div>
                     </motion.div>
                   ))}
 
                   <div className="mt-8 text-center">
-                    <p className="text-gray-600 mb-4">
+                    {/* Adjusted text color */}
+                    <p className="text-white/80 mb-4">
                       Don't see your question here? Feel free to reach out
                       directly.
                     </p>
                     <button
                       onClick={() => setActiveTab("message")}
-                      className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                      // Adjusted button style
+                      className="inline-flex items-center px-6 py-3 bg-abyssal-accent text-abyssal-base rounded-lg hover:bg-orange-400 transition-colors font-semibold"
                     >
                       <span>Contact Me</span>
                       <ArrowRight className="ml-2 w-4 h-4" />

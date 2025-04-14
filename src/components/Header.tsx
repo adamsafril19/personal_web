@@ -15,12 +15,12 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed w-full z-50">
+    <header className="fixed w-full top-0 z-50 bg-abyssal-base text-white shadow-glow-accent border-b-2 border-abyssal-accent/30">
       <nav className="container mx-auto px-6 py-4">
         {/* Oval-shaped navigation container */}
-        <div className="bg-white bg-opacity-20 backdrop-blur-lg rounded-full shadow-sm px-8 py-3">
+        <div className="bg-abyssal-base/80 backdrop-blur-lg rounded-full shadow-sm px-8 py-3">
           <div className="flex justify-between items-center">
-            <a href="#" className="text-2xl font-bold text-primary">
+            <a href="#" className="text-2xl font-bold text-abyssal-accent">
               AS
             </a>
 
@@ -34,7 +34,7 @@ const Header = () => {
                 >
                   <a
                     href={item.href}
-                    className="font-medium text-gray-700 hover:text-secondary transition-colors"
+                    className="font-medium text-white hover:text-abyssal-accent transition-colors"
                     onClick={(e) => {
                       e.preventDefault();
                       document.querySelector(item.href)?.scrollIntoView({
@@ -52,21 +52,21 @@ const Header = () => {
               <motion.a
                 href="https://github.com/adamsafril19"
                 whileHover={{ y: -2 }}
-                className="text-primary hover:text-secondary" // Diubah ke warna primary
+                className="text-abyssal-accent hover:text-white"
               >
                 <Github size={20} />
               </motion.a>
               <motion.a
                 href="https://www.linkedin.com/in/adam-safrila-5122971a2/"
                 whileHover={{ y: -2 }}
-                className="text-primary hover:text-secondary" // Diubah ke warna primary
+                className="text-abyssal-accent hover:text-white"
               >
                 <Linkedin size={20} />
               </motion.a>
               <motion.a
                 href="mailto:adamsafrila0@gmail.com"
                 whileHover={{ y: -2 }}
-                className="text-primary hover:text-secondary" // Diubah ke warna primary
+                className="text-abyssal-accent hover:text-white"
               >
                 <Mail size={20} />
               </motion.a>
@@ -74,7 +74,7 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <motion.button
-              className="md:hidden text-gray-600"
+              className="md:hidden text-white"
               onClick={() => setIsOpen(!isOpen)}
               whileTap={{ scale: 0.95 }}
             >
@@ -90,7 +90,7 @@ const Header = () => {
           transition={{ duration: 0.3 }}
           className={`
             md:hidden absolute left-0 right-0 top-full mt-2 mx-6
-            bg-white bg-opacity-90 backdrop-blur-md rounded-xl shadow-lg p-6
+            bg-abyssal-base/95 backdrop-blur-md rounded-xl shadow-lg p-6 border border-abyssal-accent/20
             ${isOpen ? "block" : "hidden"}
           `}
         >
@@ -100,7 +100,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="block text-center font-medium text-gray-700 hover:text-secondary transition-colors py-2"
+                className="block text-center font-medium text-white hover:text-abyssal-accent transition-colors py-2"
                 onClick={(e) => {
                   e.preventDefault();
                   document.querySelector(item.href)?.scrollIntoView({
@@ -114,14 +114,14 @@ const Header = () => {
             ))}
 
             {/* Divider */}
-            <hr className="border-gray-300 my-4" />
+            <hr className="border-abyssal-accent/30 my-4" />
 
             {/* Mobile Social Links */}
             <div className="flex justify-center items-center space-x-6 pt-2">
               <motion.a
                 href="https://github.com/adamsafril19"
                 whileHover={{ y: -2 }}
-                className="text-primary hover:text-secondary" // Diubah ke warna primary
+                className="text-abyssal-accent hover:text-white"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -130,7 +130,7 @@ const Header = () => {
               <motion.a
                 href="https://www.linkedin.com/in/adam-safrila-5122971a2/"
                 whileHover={{ y: -2 }}
-                className="text-primary hover:text-secondary" // Diubah ke warna primary
+                className="text-abyssal-accent hover:text-white"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -139,7 +139,7 @@ const Header = () => {
               <motion.a
                 href="mailto:adamsafrila0@gmail.com"
                 whileHover={{ y: -2 }}
-                className="text-primary hover:text-secondary" // Diubah ke warna primary
+                className="text-abyssal-accent hover:text-white"
               >
                 <Mail size={24} />
               </motion.a>

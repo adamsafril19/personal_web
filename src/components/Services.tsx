@@ -91,13 +91,20 @@ const getIcon = (iconName: string) => {
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section
+      id="services"
+      className="py-20 bg-abyssal-base text-white relative overflow-hidden"
+    >
+      {" "}
+      {/* Apply base bg and text color */}
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          {/* Adjusted header gradient */}
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-abyssal-accent to-orange-400 bg-clip-text text-transparent">
             My Services
           </h2>
-          <p className="text-gray-600 text-lg drop-shadow-sm">
+          {/* Ensure text is white */}
+          <p className="text-white text-lg drop-shadow-sm">
             Menyediakan solusi pengembangan web yang komprehensif untuk
             kebutuhan modern
           </p>
@@ -107,32 +114,44 @@ const Services = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className={`group p-8 rounded-2xl bg-gradient-to-br ${service.bgGradient} border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2`}
+              // Adjusted card style: background, border, hover effect
+              className={`group p-8 rounded-2xl bg-abyssal-base/50 border border-abyssal-accent/20 hover:border-abyssal-accent/50 hover:shadow-glow-inner transition-all duration-300 hover:-translate-y-2 backdrop-blur-sm`}
             >
               <div className="space-y-6">
-                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-                  <div className="text-primary">{getIcon(service.icon)}</div>
+                {/* Adjusted icon container style */}
+                <div className="w-14 h-14 bg-abyssal-base/70 rounded-2xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300 border border-abyssal-accent/30">
+                  {/* Adjusted icon color */}
+                  <div className="text-abyssal-accent">
+                    {getIcon(service.icon)}
+                  </div>
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold mb-3 text-gray-900">
+                  {/* Ensure text is white */}
+                  <h3 className="text-2xl font-bold mb-3 text-white">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 drop-shadow-sm">
+                  {/* Ensure text is white */}
+                  <p className="text-white/80 mb-4 drop-shadow-sm">
                     {service.description}
                   </p>
                 </div>
 
                 <div className="space-y-3">
                   {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-gray-700">
-                      <ArrowRight size={16} className="mr-2 text-primary" />
+                    // Ensure text is white, adjust icon color
+                    <div key={idx} className="flex items-center text-white/90">
+                      <ArrowRight
+                        size={16}
+                        className="mr-2 text-abyssal-accent"
+                      />
                       <span>{feature}</span>
                     </div>
                   ))}
                 </div>
 
-                <button className="mt-6 px-6 py-2 rounded-lg bg-white text-primary font-medium flex items-center gap-2 hover:gap-3 transition-all duration-300 group-hover:shadow-md">
+                {/* Adjusted button style */}
+                <button className="mt-6 px-6 py-2 rounded-lg bg-abyssal-accent text-abyssal-base font-medium flex items-center gap-2 hover:gap-3 transition-all duration-300 group-hover:shadow-md hover:bg-orange-400">
                   Learn More
                   <ArrowRight size={16} />
                 </button>

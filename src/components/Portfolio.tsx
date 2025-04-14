@@ -41,18 +41,21 @@ const Portfolio = () => {
   return (
     <motion.section
       id="portfolio"
-      className="min-h-screen flex items-center pt-16 bg-[url('/src/assets/bgSatu.jpg')] bg-cover bg-no-repeat bg-center bg-fixed relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-gray-900 before:to-blue-900 before:opacity-95 before:-z-10"
+      // Apply base background and text color
+      className="min-h-screen flex items-center py-20 bg-abyssal-base text-white relative overflow-hidden"
     >
-      {/* Background Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/95 to-emerald-950/95 -z-10" />
+      {/* Background Overlay - Removed, using base bg */}
+      {/* <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/95 to-emerald-950/95 -z-10" /> */}
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInView>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary">
+            {/* Adjusted header gradient */}
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-abyssal-accent to-orange-400 bg-clip-text text-transparent">
               Featured Works
             </h2>
-            <p className="text-lg text-gray-200 max-w-2xl mx-auto">
+            {/* Ensure text is white */}
+            <p className="text-lg text-white max-w-2xl mx-auto">
               Showcasing digital excellence through innovative solutions
             </p>
           </div>
@@ -63,7 +66,8 @@ const Portfolio = () => {
             <FadeInView key={project.id} delay={index * 0.15}>
               <motion.div
                 whileHover={{ y: -10 }}
-                className="group relative bg-slate-800/50 hover:bg-slate-900/60 border border-slate-600/30 hover:border-slate-400/50 transition-all duration-300 hover:shadow-2xl overflow-hidden"
+                // Adjusted card style: background, border
+                className="group relative bg-abyssal-base/50 hover:bg-abyssal-base/70 border border-abyssal-accent/20 hover:border-abyssal-accent/50 transition-all duration-300 hover:shadow-glow-inner rounded-xl overflow-hidden backdrop-blur-sm"
               >
                 {/* Image Container */}
                 <div className="relative h-60 overflow-hidden">
@@ -72,40 +76,45 @@ const Portfolio = () => {
                     alt={project.title}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/60 to-transparent" />
+                  {/* Adjusted image overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-abyssal-base/80 to-transparent" />
                 </div>
 
                 {/* Content */}
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-bold text-gray-100">
+                    {/* Ensure text is white */}
+                    <h3 className="text-xl font-bold text-white">
                       {project.title}
                     </h3>
-                    <ArrowUpRight className="text-emerald-400/50 group-hover:text-emerald-400 transition-colors" />
+                    {/* Adjusted icon color */}
+                    <ArrowUpRight className="text-abyssal-accent/50 group-hover:text-abyssal-accent transition-colors" />
                   </div>
 
-                  <p className="text-gray-200 font-semibold mb-5 text-sm leading-relaxed">
+                  {/* Ensure text is white */}
+                  <p className="text-white font-semibold mb-5 text-sm leading-relaxed">
                     {project.description}
                   </p>
 
-                  {/* Tech Stack */}
+                  {/* Tech Stack - Adjusted style */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-emerald-900/40 text-emerald-300 text-xs rounded-full backdrop-blur-sm"
+                        className="px-3 py-1 bg-abyssal-accent/10 text-abyssal-accent text-xs rounded-full backdrop-blur-sm"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
 
-                  {/* Action Buttons */}
+                  {/* Action Buttons - Adjusted style */}
                   <div className="flex gap-4">
                     {project.github && (
                       <motion.a
                         href={project.github}
-                        className="flex items-center text-emerald-400 hover:text-emerald-300 transition-colors"
+                        // Adjusted link color
+                        className="flex items-center text-abyssal-accent hover:text-orange-400 transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ x: 5 }}
@@ -114,11 +123,24 @@ const Portfolio = () => {
                         <span className="text-sm">Source Code</span>
                       </motion.a>
                     )}
+                    {/* Added Live Link button if available */}
+                    {project.link && project.link !== "#" && (
+                      <motion.a
+                        href={project.link}
+                        className="flex items-center text-abyssal-accent hover:text-orange-400 transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ x: 5 }}
+                      >
+                        <ExternalLink size={18} className="mr-2" />
+                        <span className="text-sm">Live Demo</span>
+                      </motion.a>
+                    )}
                   </div>
                 </div>
 
-                {/* Hover Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                {/* Hover Glow Effect - Adjusted color */}
+                <div className="absolute inset-0 bg-gradient-to-br from-abyssal-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none rounded-xl" />
               </motion.div>
             </FadeInView>
           ))}

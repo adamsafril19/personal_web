@@ -22,24 +22,27 @@ const About = () => {
   return (
     <motion.section
       id="about"
-      className="min-h-screen flex items-center pt-16 bg-[url('/src/assets/bgSatu.jpg')] bg-cover bg-no-repeat bg-center bg-fixed relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-gray-900 before:to-blue-900 before:opacity-95 before:-z-10"
+      // Apply base background and text color
+      className="min-h-screen flex items-center py-20 bg-abyssal-base text-white relative overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      {/* Background Elements */}
-      <div className="absolute inset-0 z-0 before:-z-10">
-        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 -right-40 w-80 h-80 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-1000" />
+      {/* Background Elements - Adjusted colors */}
+      <div className="absolute inset-0 z-0 opacity-30">
+        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-abyssal-accent/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 -right-40 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div className="text-center mb-16" variants={itemVariants}>
-          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          {/* Adjusted header gradient */}
+          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-abyssal-accent to-orange-400 bg-clip-text text-transparent">
             About Me
           </h2>
-          <p className="text-lg text-gray-200 max-w-2xl mx-auto">
+          {/* Ensure text is white */}
+          <p className="text-lg text-white max-w-2xl mx-auto">
             Exploring the intersection of creativity and technology
           </p>
         </motion.div>
@@ -60,13 +63,11 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
             </div>
 
-            {/* Floating Badges */}
+            {/* Floating Badges - Adjusted style */}
             <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 flex gap-4">
-              <div className="bg-white/5 backdrop-blur-sm px-6 py-2 rounded-full flex items-center gap-2 shadow-lg">
-                <Sparkles className="text-primary" size={20} />
-                <span className="text-gray-100 font-medium">
-                  Full-Stack Dev
-                </span>
+              <div className="bg-abyssal-base/50 backdrop-blur-sm px-6 py-2 rounded-full flex items-center gap-2 shadow-lg border border-abyssal-accent/20">
+                <Sparkles className="text-abyssal-accent" size={20} />
+                <span className="text-white font-medium">Full-Stack Dev</span>
               </div>
             </div>
           </motion.div>
@@ -75,10 +76,12 @@ const About = () => {
           <motion.div className="space-y-8" variants={containerVariants}>
             {/* Intro Text */}
             <motion.div variants={itemVariants}>
-              <h3 className="text-3xl font-bold text-gray-100 mb-4">
+              {/* Ensure text is white */}
+              <h3 className="text-3xl font-bold text-white mb-4">
                 Digital Craftsman & Problem Solver
               </h3>
-              <p className="text-lg text-gray-200 leading-relaxed">
+              {/* Ensure text is white */}
+              <p className="text-lg text-white leading-relaxed">
                 With 1+ year of focused experience in web development, I
                 specialize in transforming complex challenges into elegant
                 digital solutions. My approach combines technical excellence
@@ -91,40 +94,48 @@ const About = () => {
               className="grid md:grid-cols-2 gap-6"
               variants={containerVariants}
             >
+              {/* Card 1 - Adjusted style */}
               <motion.div
-                className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-primary/30 transition-all"
+                className="bg-abyssal-base/50 p-6 rounded-2xl backdrop-blur-sm border border-abyssal-accent/20 hover:border-abyssal-accent/50 transition-all"
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <BookOpen className="text-primary" size={24} />
+                  {/* Adjusted icon style */}
+                  <div className="p-3 bg-abyssal-accent/10 rounded-lg">
+                    <BookOpen className="text-abyssal-accent" size={24} />
                   </div>
-                  <h4 className="text-xl font-semibold text-gray-100">
+                  {/* Ensure text is white */}
+                  <h4 className="text-xl font-semibold text-white">
                     Education
                   </h4>
                 </div>
-                <p className="text-gray-200">
+                {/* Ensure text is white */}
+                <p className="text-white">
                   Undergraduate in Business Information Systems
                   <br />
                   State Polytechnic of Malang
                 </p>
               </motion.div>
 
+              {/* Card 2 - Adjusted style */}
               <motion.div
-                className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-secondary/30 transition-all"
+                className="bg-abyssal-base/50 p-6 rounded-2xl backdrop-blur-sm border border-abyssal-accent/20 hover:border-abyssal-accent/50 transition-all"
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 bg-secondary/10 rounded-lg">
-                    <Code className="text-secondary" size={24} />
+                  {/* Adjusted icon style */}
+                  <div className="p-3 bg-abyssal-accent/10 rounded-lg">
+                    <Code className="text-abyssal-accent" size={24} />
                   </div>
-                  <h4 className="text-xl font-semibold text-gray-100">
+                  {/* Ensure text is white */}
+                  <h4 className="text-xl font-semibold text-white">
                     Expertise
                   </h4>
                 </div>
-                <p className="text-gray-200">
+                {/* Ensure text is white */}
+                <p className="text-white">
                   Web Development • API Design
                   <br />
                   Mobile Development
@@ -132,28 +143,34 @@ const About = () => {
               </motion.div>
             </motion.div>
 
-            {/* Experience Timeline */}
+            {/* Experience Timeline - Adjusted style */}
             <motion.div
-              className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-secondary/30 transition-all"
+              className="bg-abyssal-base/50 p-6 rounded-2xl backdrop-blur-sm border border-abyssal-accent/20 hover:border-abyssal-accent/50 transition-all"
               variants={itemVariants}
               whileHover={{ y: -5 }}
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Award className="text-primary" size={24} />
+                {/* Adjusted icon style */}
+                <div className="p-3 bg-abyssal-accent/10 rounded-lg">
+                  <Award className="text-abyssal-accent" size={24} />
                 </div>
-                <h4 className="text-xl font-semibold text-gray-100">Journey</h4>
+                {/* Ensure text is white */}
+                <h4 className="text-xl font-semibold text-white">Journey</h4>
               </div>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full" />
-                  <span className="text-gray-200">
+                  {/* Adjusted bullet color */}
+                  <div className="w-2 h-2 bg-abyssal-accent rounded-full" />
+                  {/* Ensure text is white */}
+                  <span className="text-white">
                     1 Years in Web & Mobile Development
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full" />
-                  <span className="text-gray-200">2 Projects Completed</span>
+                  {/* Adjusted bullet color */}
+                  <div className="w-2 h-2 bg-abyssal-accent rounded-full" />
+                  {/* Ensure text is white */}
+                  <span className="text-white">2 Projects Completed</span>
                 </div>
               </div>
             </motion.div>
