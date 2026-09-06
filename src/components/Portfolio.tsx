@@ -22,7 +22,7 @@ const projects: Project[] = [
       "HR Management Information System is an information system created to manage the distribution of HR tasks at JTI (Jurusan Teknologi Informasi Polinema) in mobile platform.",
     image: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
     technologies: ["Flutter", "MySQL"],
-    github: "https://github.com",
+    github: "https://github.com/adamsafril19/simas_app",
     link: "#",
   },
   {
