@@ -6,6 +6,7 @@ export interface Project {
   technologies: string[];
   link?: string;
   github?: string;
+  category?: string;
 }
 
 export interface Service {

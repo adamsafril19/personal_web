@@ -5,27 +5,23 @@ import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import TechnologyStack from "./components/TechnologyStack";
-import Services from "./components/Services"; // Import Services
-import Blog from "./components/Blog"; // Import Blog
+import Services from "./components/Services";
 
 function App() {
   return (
-    // Apply base background to the main container
-    <div className="min-h-screen bg-abyssal-base">
+    <div className="min-h-screen bg-abyssal-base dark:bg-abyssal-base light:bg-orange-50 transition-colors duration-300">
       <Header />
       <main>
         <Hero />
         <About />
         <TechnologyStack />
         <Portfolio />
+        <Services />
         <Contact />
       </main>
-      {/* Apply base background to the footer */}
-      <footer className="bg-abyssal-base text-white py-8 border-t border-abyssal-accent/20">
-        {" "}
-        {/* Added top border */}
+      <footer className="bg-abyssal-base dark:bg-abyssal-base light:bg-orange-50 text-white light:text-gray-800 py-8 border-t border-abyssal-accent/20 light:border-orange-200 transition-colors duration-300">
         <div className="container mx-auto px-6 text-center">
-          <p>© {new Date().getFullYear()} Adam Safrila. All rights reserved.</p>
+          <p className="light:text-gray-700">© {new Date().getFullYear()} Adam Safrila. All rights reserved.</p>
         </div>
       </footer>
     </div>

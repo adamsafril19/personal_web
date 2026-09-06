@@ -9,7 +9,7 @@ interface FadeInViewProps {
 
 export const FadeInView = ({ children, delay = 0 }: FadeInViewProps) => {
   const [ref, inView] = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.1,
   });
 
