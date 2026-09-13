@@ -5,51 +5,62 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FadeInView } from "./animations/FadeInView";
 
 const projects: Project[] = [
-  {
-    id: 1,
-    title: "Web HR Management Information System",
-    description:
-      "HR Management Information System is an information system created to manage the distribution of HR tasks at JTI (Jurusan Teknologi Informasi Polinema) in web platform.",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c",
-    technologies: ["Laravel", "MySQL", "Bootstrap"],
-    github: "https://github.com/Salma310/simas_web",
-    link: "#",
-    category: "Web",
-  },
-  {
-    id: 2,
-    title: "App HR Management Information System",
-    description:
-      "HR Management Information System is an information system created to manage the distribution of HR tasks at JTI (Jurusan Teknologi Informasi Polinema) in mobile platform.",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
-    technologies: ["Flutter", "MySQL"],
-    github: "https://github.com/adamsafril19/simas_app",
-    link: "#",
-    category: "Mobile",
-  },
-  {
-    id: 3,
-    title: "Tuffero POS",
-    description:
-      "A modern Point of Sale (POS) web application for managing sales, inventory, and transactions efficiently. Built with a clean UI and responsive design.",
-    image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1",
-    technologies: ["React", "Tailwind", "Node.js"],
-    github: "https://github.com/adamsafril19/tuffero_pos",
-    link: "#",
-    category: "Web",
-  },
-  {
-    id: 4,
-    title: "Portfolio Website",
-    description:
-      "A responsive portfolio website built with React and Typescript showcasing projects, services, and contact information with smooth animations.",
-    image: "https://images.unsplash.com/photo-1559028012-481c04fa702d",
-    technologies: ["React", "TypeScript", "Tailwind"],
-    github: "https://github.com/adamsafril19/personal_web",
-    link: "#",
-    category: "Web",
-  },
-];
+   {
+     id: 1,
+     title: "Web HR Management Information System",
+     description:
+       "HR Management Information System is an information system created to manage the distribution of HR tasks at JTI (Jurusan Teknologi Informasi Polinema) in web platform.",
+     image: "https://images.unsplash.com/photo-1557821552-17105176677c",
+     technologies: ["Laravel", "MySQL", "Bootstrap"],
+     github: "https://github.com/Salma310/simas_web",
+     link: "#",
+     category: "Web",
+   },
+   {
+     id: 2,
+     title: "App HR Management Information System",
+     description:
+       "HR Management Information System is an information system created to manage the distribution of HR tasks at JTI (Jurusan Teknologi Informasi Polinema) in mobile platform.",
+     image: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
+     technologies: ["Flutter", "MySQL"],
+     github: "https://github.com/adamsafril19/simas_app",
+     link: "#",
+     category: "Mobile",
+   },
+   {
+     id: 3,
+     title: "Tuffero POS",
+     description:
+       "A modern Point of Sale (POS) web application for managing sales, inventory, and transactions efficiently. Built with a clean UI and responsive design.",
+     image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1",
+     technologies: ["React", "Tailwind", "Node.js"],
+     github: "https://github.com/adamsafril19/tuffero_pos",
+     link: "#",
+     category: "Web",
+   },
+   {
+     id: 4,
+     title: "Portfolio Website",
+     description:
+       "A responsive portfolio website built with React and Typescript showcasing projects, services, and contact information with smooth animations.",
+     image: "https://images.unsplash.com/photo-1559028012-481c04fa702d",
+     technologies: ["React", "TypeScript", "Tailwind"],
+     github: "https://github.com/adamsafril19/personal_web",
+     link: "#",
+     category: "Web",
+   },
+   {
+     id: 5,
+     title: "Hajj Savings Application",
+     description:
+       "A secure and scalable backend infrastructure for a Hajj Savings application implementing Microservices architecture, Docker containerization, and Redis/MySQL caching for optimized data retrieval.",
+     image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1", // placeholder image
+     technologies: ["PHP", "Laravel", "MySQL", "Redis", "Docker"],
+     github: "#", // to be updated
+     link: "#",
+     category: "Web",
+   },
+ ];
 
 const categories = ["All", "Web", "Mobile"];
 

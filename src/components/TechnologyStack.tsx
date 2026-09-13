@@ -2,87 +2,101 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 type Tech = {
-  name: string;
-  description: string;
-  logo: string;
-  category: "Frontend" | "Backend" | "Mobile" | "Database" | "Styling";
-  level: number;
-};
+   name: string;
+   description: string;
+   logo: string;
+   category: "Frontend" | "Backend" | "Mobile" | "Database" | "Styling" | "DevOps";
+   level: number;
+ };
 
 const technologies: Tech[] = [
-  {
-    name: "HTML",
-    description: "Standard markup language for creating web structures",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    category: "Frontend",
-    level: 90,
-  },
-  {
-    name: "CSS",
-    description: "A stylesheet language for styling web pages",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    category: "Frontend",
-    level: 85,
-  },
-  {
-    name: "JavaScript",
-    description: "Programming language for dynamic web",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    category: "Frontend",
-    level: 80,
-  },
-  {
-    name: "React",
-    description: "JavaScript library for building user interface (UI)",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    category: "Frontend",
-    level: 80,
-  },
-  {
-    name: "Tailwind",
-    description: "Framework CSS utility-first",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-    category: "Styling",
-    level: 85,
-  },
-  {
-    name: "Flutter",
-    description: "UI framework for building mobile applications",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
-    category: "Mobile",
-    level: 75,
-  },
-  {
-    name: "PHP",
-    description: "Server-side scripting language for web development",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-    category: "Backend",
-    level: 80,
-  },
-  {
-    name: "Node.js",
-    description: "JavaScript runtime for building backend applications",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    category: "Backend",
-    level: 70,
-  },
-  {
-    name: "Laravel",
-    description: "PHP framework for modern web development",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
-    category: "Backend",
-    level: 75,
-  },
-  {
-    name: "MySQL",
-    description: "Open-source relational database management system",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    category: "Database",
-    level: 80,
-  },
-];
+   {
+     name: "HTML",
+     description: "Standard markup language for creating web structures",
+     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+     category: "Frontend",
+     level: 90,
+   },
+   {
+     name: "CSS",
+     description: "A stylesheet language for styling web pages",
+     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+     category: "Frontend",
+     level: 85,
+   },
+   {
+     name: "JavaScript",
+     description: "Programming language for dynamic web",
+     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+     category: "Frontend",
+     level: 80,
+   },
+   {
+     name: "React",
+     description: "JavaScript library for building user interface (UI)",
+     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+     category: "Frontend",
+     level: 80,
+   },
+   {
+     name: "Tailwind",
+     description: "Framework CSS utility-first",
+     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+     category: "Styling",
+     level: 85,
+   },
+   {
+     name: "Flutter",
+     description: "UI framework for building mobile applications",
+     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+     category: "Mobile",
+     level: 75,
+   },
+   {
+     name: "PHP",
+     description: "Server-side scripting language for web development",
+     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+     category: "Backend",
+     level: 80,
+   },
+   {
+     name: "Node.js",
+     description: "JavaScript runtime for building backend applications",
+     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+     category: "Backend",
+     level: 70,
+   },
+   {
+     name: "Laravel",
+     description: "PHP framework for modern web development",
+     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
+     category: "Backend",
+     level: 75,
+   },
+   {
+     name: "MySQL",
+     description: "Open-source relational database management system",
+     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+     category: "Database",
+     level: 80,
+   },
+   {
+     name: "Redis",
+     description: "In-memory data structure store used as database, cache, and message broker",
+     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original-wordmark.svg",
+     category: "Database",
+     level: 70,
+   },
+   {
+     name: "Docker",
+     description: "Platform for developing, shipping, and running applications in containers",
+     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg",
+     category: "DevOps",
+     level: 65,
+   },
+ ];
 
-const categories = ["All", "Frontend", "Backend", "Mobile", "Database", "Styling"];
+const categories = ["All", "Frontend", "Backend", "Mobile", "Database", "Styling", "DevOps"];
 
 const TechnologyStack = () => {
   const [activeCategory, setActiveCategory] = useState("All");
