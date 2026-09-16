@@ -86,7 +86,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
               className="flex flex-wrap gap-3 justify-center md:justify-start mb-10"
             >
-              {["React", "TypeScript", "Node.js", "Tailwind", "Next.js"].map((tech) => (
+              {["Laravel", "Python", "Flutter", "Docker", "React", "TypeScript"].map((tech) => (
                 <motion.span
                   key={tech}
                   whileHover={{ scale: 1.05 }}
@@ -142,8 +142,8 @@ const Hero = () => {
               className="mt-16 flex flex-wrap gap-8 md:gap-12"
             >
               {[
-                { label: "Projects", value: "5+" },
-                { label: "Experience", value: "1 Year" },
+                { label: "Projects", value: "6+" },
+                { label: "Experience", value: "1+ Years" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <p className="text-3xl md:text-4xl font-bold text-gradient">{stat.value}</p>

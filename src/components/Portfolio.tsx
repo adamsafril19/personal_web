@@ -5,64 +5,75 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FadeInView } from "./animations/FadeInView";
 
 const projects: Project[] = [
-   {
-     id: 1,
-     title: "Web HR Management Information System",
-     description:
-       "HR Management Information System is an information system created to manage the distribution of HR tasks at JTI (Jurusan Teknologi Informasi Polinema) in web platform.",
-     image: "https://images.unsplash.com/photo-1557821552-17105176677c",
-     technologies: ["Laravel", "MySQL", "Bootstrap"],
-     github: "https://github.com/Salma310/simas_web",
-     link: "#",
-     category: "Web",
-   },
-   {
-     id: 2,
-     title: "App HR Management Information System",
-     description:
-       "HR Management Information System is an information system created to manage the distribution of HR tasks at JTI (Jurusan Teknologi Informasi Polinema) in mobile platform.",
-     image: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
-     technologies: ["Flutter", "MySQL"],
-     github: "https://github.com/adamsafril19/simas_app",
-     link: "#",
-     category: "Mobile",
-   },
-   {
-     id: 3,
-     title: "Tuffero POS",
-     description:
-       "A modern Point of Sale (POS) web application for managing sales, inventory, and transactions efficiently. Built with a clean UI and responsive design.",
-     image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1",
-     technologies: ["React", "Tailwind", "Node.js"],
-     github: "https://github.com/adamsafril19/tuffero_pos",
-     link: "#",
-     category: "Web",
-   },
-   {
-     id: 4,
-     title: "Portfolio Website",
-     description:
-       "A responsive portfolio website built with React and Typescript showcasing projects, services, and contact information with smooth animations.",
-     image: "https://images.unsplash.com/photo-1559028012-481c04fa702d",
-     technologies: ["React", "TypeScript", "Tailwind"],
-     github: "https://github.com/adamsafril19/personal_web",
-     link: "#",
-     category: "Web",
-   },
-   {
-     id: 5,
-     title: "Hajj Savings Application",
-     description:
-       "A secure and scalable backend infrastructure for a Hajj Savings application implementing Microservices architecture, Docker containerization, and Redis/MySQL caching for optimized data retrieval.",
-     image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1", // placeholder image
-     technologies: ["PHP", "Laravel", "MySQL", "Redis", "Docker"],
-     github: "#", // to be updated
-     link: "#",
-     category: "Web",
-   },
- ];
+  {
+    id: 1,
+    title: "Customer Analytics & Churn Prediction (Mamina)",
+    description:
+      "An end-to-end Machine Learning behavioral risk scoring system for Mamina Baby Spa to predict customer churn using XGBoost, SHAP explainability, Flask REST API, and a real-time React dashboard.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    technologies: ["Python", "Flask", "XGBoost", "SHAP", "React", "Docker"],
+    github: "https://github.com/adamsafril19/Customer-Analitycs--Mamina-",
+    link: "#",
+    category: "AI & ML",
+  },
+  {
+    id: 2,
+    title: "Tabungan HajiKu - Hajj Savings Platform",
+    description:
+      "Enterprise-grade financial platform for Hajj & Umrah savings powered by 14 decoupled microservices orchestrated behind a centralized API Gateway, containerized with Docker, with Redis caching and JWT security.",
+    image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1",
+    technologies: ["PHP", "Microservices", "Docker", "Redis", "MySQL"],
+    github: "https://github.com/adamsafril19/Tabungan-Hajiku",
+    link: "#",
+    category: "Web",
+  },
+  {
+    id: 3,
+    title: "Tuffero POS ERP System",
+    description:
+      "A comprehensive web-based Point of Sale (POS) and ERP system to digitalize MSME retail operations, inventory management, user roles, and financial transaction workflows.",
+    image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df",
+    technologies: ["Laravel", "PHP", "PostgreSQL", "MySQL", "Bootstrap"],
+    github: "https://github.com/adamsafril19/tuffero_pos",
+    link: "#",
+    category: "Web",
+  },
+  {
+    id: 4,
+    title: "Web HR Management System (SIMAS)",
+    description:
+      "Web-based human resource management system built to coordinate data and workload distribution at JTI Polinema using Laravel and the TOPSIS decision analysis algorithm.",
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c",
+    technologies: ["Laravel", "PHP", "MySQL", "Bootstrap", "RESTful API"],
+    github: "https://github.com/Salma310/simas_web",
+    link: "#",
+    category: "Web",
+  },
+  {
+    id: 5,
+    title: "Mobile HR Management App (SIMAS)",
+    description:
+      "Mobile-first HR management application developed with Flutter for flexible employee attendance and real-time workload monitoring synchronized via secure REST APIs.",
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
+    technologies: ["Flutter", "Dart", "RESTful API", "MySQL"],
+    github: "https://github.com/adamsafril19/simas_app",
+    link: "#",
+    category: "Mobile",
+  },
+  {
+    id: 6,
+    title: "Interactive Developer Portfolio",
+    description:
+      "Modern, responsive personal portfolio built with React, TypeScript, and Tailwind CSS featuring smooth Framer Motion animations, dark mode aesthetics, and project showcases.",
+    image: "https://images.unsplash.com/photo-1559028012-481c04fa702d",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    github: "https://github.com/adamsafril19/personal_web",
+    link: "#",
+    category: "Web",
+  },
+];
 
-const categories = ["All", "Web", "Mobile"];
+const categories = ["All", "Web", "Mobile", "AI & ML"];
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
