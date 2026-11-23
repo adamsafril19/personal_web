@@ -21,7 +21,7 @@ const About = () => {
 
   const stats = [
     { label: "Years Experience", value: "1+" },
-    { label: "Projects Completed", value: "6+" },
+    { label: "Projects Completed", value: "7+" },
     { label: "Technologies", value: "12+" },
   ];
 
@@ -188,7 +188,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-abyssal-accent rounded-full ring-4 ring-abyssal-accent/20" />
-                  <span className="text-white/80 text-sm">6+ Projects Completed</span>
+                  <span className="text-white/80 text-sm">7+ Projects Completed</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-abyssal-accent rounded-full ring-4 ring-abyssal-accent/20" />

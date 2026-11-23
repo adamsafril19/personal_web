@@ -7,6 +7,24 @@ import { FadeInView } from "./animations/FadeInView";
 const projects: Project[] = [
   {
     id: 1,
+    title: "Electra - EV Rental & Fleet Management Platform",
+    description:
+      "Full-stack Electric Vehicle (EV) rental platform with WhatsApp-first booking, State-of-Charge (SoC) battery tracking, and an integrated admin dashboard for fleet, driver scheduling, financial ledger, and live chat.",
+    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7",
+    technologies: [
+      "TypeScript",
+      "React Native (Expo)",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+    ],
+    github: "https://github.com/adamsafril19/electraProfile",
+    link: "https://electraprofile-web.vercel.app",
+    category: "Web",
+  },
+  {
+    id: 2,
     title: "Customer Analytics & Churn Prediction (Mamina)",
     description:
       "An end-to-end Machine Learning behavioral risk scoring system for Mamina Baby Spa to predict customer churn using XGBoost, SHAP explainability, Flask REST API, and a real-time React dashboard.",
@@ -17,7 +35,7 @@ const projects: Project[] = [
     category: "AI & ML",
   },
   {
-    id: 2,
+    id: 3,
     title: "Tabungan HajiKu - Hajj Savings Platform",
     description:
       "Enterprise-grade financial platform for Hajj & Umrah savings powered by 14 decoupled microservices orchestrated behind a centralized API Gateway, containerized with Docker, with Redis caching and JWT security.",
@@ -28,7 +46,7 @@ const projects: Project[] = [
     category: "Web",
   },
   {
-    id: 3,
+    id: 4,
     title: "Tuffero POS ERP System",
     description:
       "A comprehensive web-based Point of Sale (POS) and ERP system to digitalize MSME retail operations, inventory management, user roles, and financial transaction workflows.",
@@ -39,7 +57,7 @@ const projects: Project[] = [
     category: "Web",
   },
   {
-    id: 4,
+    id: 5,
     title: "Web HR Management System (SIMAS)",
     description:
       "Web-based human resource management system built to coordinate data and workload distribution at JTI Polinema using Laravel and the TOPSIS decision analysis algorithm.",
@@ -50,7 +68,7 @@ const projects: Project[] = [
     category: "Web",
   },
   {
-    id: 5,
+    id: 6,
     title: "Mobile HR Management App (SIMAS)",
     description:
       "Mobile-first HR management application developed with Flutter for flexible employee attendance and real-time workload monitoring synchronized via secure REST APIs.",
@@ -61,7 +79,7 @@ const projects: Project[] = [
     category: "Mobile",
   },
   {
-    id: 6,
+    id: 7,
     title: "Interactive Developer Portfolio",
     description:
       "Modern, responsive personal portfolio built with React, TypeScript, and Tailwind CSS featuring smooth Framer Motion animations, dark mode aesthetics, and project showcases.",

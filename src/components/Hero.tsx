@@ -142,7 +142,7 @@ const Hero = () => {
               className="mt-16 flex flex-wrap gap-8 md:gap-12"
             >
               {[
-                { label: "Projects", value: "6+" },
+                { label: "Projects", value: "7+" },
                 { label: "Experience", value: "1+ Years" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
