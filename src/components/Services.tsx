@@ -105,8 +105,8 @@ const Services = () => {
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-20px" }}
+                transition={{ duration: 0.3, delay: Math.min(index * 0.04, 0.15) }}
                 whileHover={{ y: -8 }}
                 className="group relative p-8 rounded-2xl bg-abyssal-base/50 border border-abyssal-accent/20 hover:border-abyssal-accent/50 hover:shadow-glow-inner transition-all duration-300 backdrop-blur-sm overflow-hidden"
               >
@@ -179,8 +179,8 @@ const Services = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.35, delay: 0.1 }}
           className="text-center mt-16"
         >
           <p className="text-white/70 mb-4">Have a project in mind?</p>

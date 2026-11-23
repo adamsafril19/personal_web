@@ -35,9 +35,9 @@ const Hero = () => {
           {/* Text Content */}
           <div className="md:w-1/2 mt-10 md:mt-0 text-center md:text-left">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
               className="mb-6"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-abyssal-accent/10 border border-abyssal-accent/20 backdrop-blur-sm">
@@ -47,21 +47,21 @@ const Hero = () => {
             </motion.div>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              transition={{ duration: 0.4, delay: 0.05, ease: "easeOut" }}
               className="text-xl md:text-2xl font-mono mb-2 text-white/80"
             >
               Hi, I'm
             </motion.p>
 
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
               className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight"
             >
-              <TypingEffect delay={0.8} loop={true}>
+              <TypingEffect delay={0.2} loop={true}>
                 <span className="text-gradient">
                   Adam Safrila
                 </span>
@@ -69,9 +69,9 @@ const Hero = () => {
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              transition={{ duration: 0.4, delay: 0.15, ease: "easeOut" }}
               className="text-2xl md:text-3xl text-white/90 mb-10 font-medium max-w-2xl leading-relaxed"
             >
               Crafting <span className="text-abyssal-accent">immersive</span> digital experiences through{" "}
@@ -81,9 +81,9 @@ const Hero = () => {
 
             {/* Tech Badges */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
               className="flex flex-wrap gap-3 justify-center md:justify-start mb-10"
             >
               {["Laravel", "Python", "Flutter", "Docker", "React", "TypeScript"].map((tech) => (
@@ -99,9 +99,9 @@ const Hero = () => {
 
             {/* Buttons Container */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
+              transition={{ duration: 0.4, delay: 0.25, ease: "easeOut" }}
               className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
             >
               <FloatingButton>
@@ -136,9 +136,9 @@ const Hero = () => {
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
+              transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
               className="mt-16 flex flex-wrap gap-8 md:gap-12"
             >
               {[
@@ -155,9 +155,9 @@ const Hero = () => {
 
           {/* Profile Image Section */}
           <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
+            initial={{ scale: 0.92, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
             className="relative group md:w-1/2 flex justify-center"
           >
             {/* Rotating Gradient Border */}
@@ -166,6 +166,8 @@ const Hero = () => {
                 <img
                   src={cobImage}
                   alt="Adam Safrila Irawan"
+                  decoding="async"
+                  fetchPriority="high"
                   className="w-72 h-72 md:w-96 md:h-96 rounded-full object-cover shadow-2xl border-4 border-abyssal-accent/20 relative z-10 transform group-hover:rotate-3 transition-transform duration-300"
                 />
               </div>

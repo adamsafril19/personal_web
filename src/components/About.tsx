@@ -8,8 +8,8 @@ const About = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
+        staggerChildren: 0.08,
+        delayChildren: 0.05,
       },
     },
   };
@@ -31,7 +31,7 @@ const About = () => {
       className="min-h-screen flex items-center py-20 bg-abyssal-base text-white relative overflow-hidden"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       {/* Background Elements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -67,8 +67,10 @@ const About = () => {
 
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-abyssal-accent/20 group-hover:border-abyssal-accent/40 transition-colors">
                 <img
-                  src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c"
+                  src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?auto=format&fit=crop&w=800&q=75"
                   alt="Working at desk"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-auto object-cover aspect-square transform group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-abyssal-base/80 via-transparent to-transparent" />

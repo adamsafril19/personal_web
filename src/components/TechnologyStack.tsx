@@ -136,8 +136,8 @@ const TechnologyStack = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.35 }}
           className="text-center mb-12"
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-abyssal-accent/10 border border-abyssal-accent/20 text-abyssal-accent text-sm font-medium mb-4">
@@ -156,8 +156,8 @@ const TechnologyStack = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.35, delay: 0.05 }}
           className="flex flex-wrap justify-center gap-2 mb-12"
         >
           {categories.map((category) => (
@@ -189,8 +189,8 @@ const TechnologyStack = () => {
                 layout
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.25, delay: Math.min(index * 0.02, 0.15) }}
                 whileHover={{ y: -8 }}
                 className="group relative bg-abyssal-base/50 hover:bg-abyssal-base/70 border border-abyssal-accent/20 hover:border-abyssal-accent/50 p-6 rounded-2xl backdrop-blur-sm transition-all duration-300"
               >
@@ -207,6 +207,8 @@ const TechnologyStack = () => {
                     <img
                       src={tech.logo}
                       alt={tech.name}
+                      loading="lazy"
+                      decoding="async"
                       className="w-12 h-12 object-contain filter drop-shadow-lg"
                       onError={(e) => {
                         // Fallback if image fails to load
@@ -253,8 +255,8 @@ const TechnologyStack = () => {
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${tech.level}%` }}
-                        viewport={{ once: false, amount: 0.5 }}
-                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        viewport={{ once: true, amount: 0.1 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
                         className="h-full bg-gradient-to-r from-abyssal-accent to-orange-400 rounded-full"
                       />
                     </div>

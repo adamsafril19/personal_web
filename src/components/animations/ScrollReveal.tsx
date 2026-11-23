@@ -31,8 +31,8 @@ export const ScrollReveal = ({
       className={className}
       initial={variants.initial}
       whileInView={variants.animate}
-      viewport={{ once: false, margin: "-50px" }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-20px" }}
+      transition={{ duration: 0.35, delay, ease: "easeOut" }}
     >
       {children}
     </motion.div>

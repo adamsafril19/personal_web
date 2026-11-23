@@ -10,7 +10,7 @@ const projects: Project[] = [
     title: "Electra - EV Rental & Fleet Management Platform",
     description:
       "Full-stack Electric Vehicle (EV) rental platform with WhatsApp-first booking, State-of-Charge (SoC) battery tracking, and an integrated admin dashboard for fleet, driver scheduling, financial ledger, and live chat.",
-    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7",
+    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=75",
     technologies: [
       "TypeScript",
       "React Native (Expo)",
@@ -28,7 +28,7 @@ const projects: Project[] = [
     title: "Customer Analytics & Churn Prediction (Mamina)",
     description:
       "An end-to-end Machine Learning behavioral risk scoring system for Mamina Baby Spa to predict customer churn using XGBoost, SHAP explainability, Flask REST API, and a real-time React dashboard.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=75",
     technologies: ["Python", "Flask", "XGBoost", "SHAP", "React", "Docker"],
     github: "https://github.com/adamsafril19/Customer-Analitycs--Mamina-",
     link: "#",
@@ -39,7 +39,7 @@ const projects: Project[] = [
     title: "Tabungan HajiKu - Hajj Savings Platform",
     description:
       "Enterprise-grade financial platform for Hajj & Umrah savings powered by 14 decoupled microservices orchestrated behind a centralized API Gateway, containerized with Docker, with Redis caching and JWT security.",
-    image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1",
+    image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&w=800&q=75",
     technologies: ["PHP", "Microservices", "Docker", "Redis", "MySQL"],
     github: "https://github.com/adamsafril19/Tabungan-Hajiku",
     link: "#",
@@ -50,7 +50,7 @@ const projects: Project[] = [
     title: "Tuffero POS ERP System",
     description:
       "A comprehensive web-based Point of Sale (POS) and ERP system to digitalize MSME retail operations, inventory management, user roles, and financial transaction workflows.",
-    image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df",
+    image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=800&q=75",
     technologies: ["Laravel", "PHP", "PostgreSQL", "MySQL", "Bootstrap"],
     github: "https://github.com/adamsafril19/tuffero_pos",
     link: "#",
@@ -61,7 +61,7 @@ const projects: Project[] = [
     title: "Web HR Management System (SIMAS)",
     description:
       "Web-based human resource management system built to coordinate data and workload distribution at JTI Polinema using Laravel and the TOPSIS decision analysis algorithm.",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c",
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&q=75",
     technologies: ["Laravel", "PHP", "MySQL", "Bootstrap", "RESTful API"],
     github: "https://github.com/Salma310/simas_web",
     link: "#",
@@ -72,7 +72,7 @@ const projects: Project[] = [
     title: "Mobile HR Management App (SIMAS)",
     description:
       "Mobile-first HR management application developed with Flutter for flexible employee attendance and real-time workload monitoring synchronized via secure REST APIs.",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=75",
     technologies: ["Flutter", "Dart", "RESTful API", "MySQL"],
     github: "https://github.com/adamsafril19/simas_app",
     link: "#",
@@ -83,7 +83,7 @@ const projects: Project[] = [
     title: "Interactive Developer Portfolio",
     description:
       "Modern, responsive personal portfolio built with React, TypeScript, and Tailwind CSS featuring smooth Framer Motion animations, dark mode aesthetics, and project showcases.",
-    image: "https://images.unsplash.com/photo-1559028012-481c04fa702d",
+    image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=75",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/adamsafril19/personal_web",
     link: "#",
@@ -161,9 +161,9 @@ const Portfolio = () => {
                 layout
                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.1 }}
                 exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
+                transition={{ duration: 0.3, delay: Math.min(index * 0.04, 0.2) }}
                 whileHover={{ y: -10 }}
                 className="group relative bg-abyssal-base/50 hover:bg-abyssal-base/70 border border-abyssal-accent/20 hover:border-abyssal-accent/50 transition-all duration-300 hover:shadow-glow-inner rounded-2xl overflow-hidden backdrop-blur-sm"
               >
@@ -172,6 +172,8 @@ const Portfolio = () => {
                   <img
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-abyssal-base via-abyssal-base/50 to-transparent" />
